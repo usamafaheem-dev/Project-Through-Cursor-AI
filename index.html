@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solana Blockchain Development — Community</title>
+    <meta name="description" content="Build lightning-fast, scalable dApps on Solana. Join our developer community, explore docs, and start shipping." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/logo.svg" />
+    <link rel="preload" as="image" href="assets/hero-visual.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas" class="bg-canvas" aria-hidden="true"></canvas>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#">
+          <img src="assets/logo.svg" alt="Logo" width="28" height="28" />
+          <span>Solana Devs</span>
+        </a>
+        <nav class="primary-nav" aria-label="Primary">
+          <button class="nav-toggle" aria-label="Open Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#market">Market</a></li>
+            <li><a href="#community">Community</a></li>
+            <li><a href="#docs">Docs</a></li>
+          </ul>
+          <div class="nav-indicator" id="nav-indicator"></div>
+        </nav>
+        <div class="header-cta">
+          <a class="btn btn-outline btn-sm" href="#docs">Read Docs</a>
+          <a class="btn btn-primary btn-sm" href="#get-started">Get Started</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <canvas id="hero-canvas" class="hero-canvas" aria-hidden="true"></canvas>
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <h1 data-reveal>
+              Build on <span class="brand-gradient">Solana</span>
+            </h1>
+            <p class="lead" data-reveal>
+              Ship scalable, low-latency dApps with near‑instant finality and ultra‑low fees. Join a thriving builder community and launch faster.
+            </p>
+            <div class="cta-row" data-reveal>
+              <a class="btn btn-primary btn-lg" href="#get-started">Start Building</a>
+              <a class="btn btn-ghost btn-lg" href="#community">Explore Community</a>
+            </div>
+            <div class="metrics" data-reveal>
+              <div class="metric"><span class="num">0.4s</span><span class="label">Time to finality</span></div>
+              <div class="metric"><span class="num">$0.0001</span><span class="label">Avg tx cost</span></div>
+              <div class="metric"><span class="num">2,000+</span><span class="label">Active projects</span></div>
+            </div>
+          </div>
+          <div class="hero-visual" data-reveal>
+            <img src="assets/hero-visual.svg" alt="Network visualization" width="800" height="560" decoding="async" fetchpriority="high" />
+          </div>
+        </div>
+        <div class="hero-marquee" aria-hidden="true">
+          <div class="marquee-track">
+            <span>Rust</span><span>TypeScript</span><span>Anchor</span><span>Sealevel</span><span>RPC</span><span>DeFi</span><span>NFTs</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Market ticker">
+        <div class="container">
+          <div class="ticker-track" id="ticker-track">
+            <div class="tick green">SOL/USDC <strong>+$1.24%</strong></div>
+            <div class="tick red">BTC/USDT <strong>-0.83%</strong></div>
+            <div class="tick green">ETH/USDT <strong>+0.45%</strong></div>
+            <div class="tick red">APT/USDC <strong>-1.12%</strong></div>
+            <div class="tick green">MATIC/USDT <strong>+0.31%</strong></div>
+            <div class="tick green">BONK/USDC <strong>+3.08%</strong></div>
+            <div class="tick red">ARB/USDT <strong>-0.22%</strong></div>
+            <div class="tick green">SOL/USDC <strong>+$1.24%</strong></div>
+            <div class="tick red">BTC/USDT <strong>-0.83%</strong></div>
+            <div class="tick green">ETH/USDT <strong>+0.45%</strong></div>
+            <div class="tick red">APT/USDC <strong>-1.12%</strong></div>
+            <div class="tick green">MATIC/USDT <strong>+0.31%</strong></div>
+            <div class="tick green">BONK/USDC <strong>+3.08%</strong></div>
+            <div class="tick red">ARB/USDT <strong>-0.22%</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="about">
+        <div class="container narrow">
+          <h2 data-reveal>Why Solana</h2>
+          <p class="subhead" data-reveal>
+            A high‑performance blockchain built for scale. Parallelized runtime, sub‑second finality, and a developer‑first toolchain.
+          </p>
+          <div class="features-grid three">
+            <article class="card" data-reveal>
+              <div class="icon gradient-badge">⚡</div>
+              <h3>Blazing Performance</h3>
+              <p>Parallelized execution and optimized runtimes enable massive throughput without compromising on cost.</p>
+            </article>
+            <article class="card" data-reveal>
+              <div class="icon gradient-badge">💸</div>
+              <h3>Ultra‑Low Fees</h3>
+              <p>Average transaction fees of a fraction of a cent allow new product designs and near‑real‑time UX.</p>
+            </article>
+            <article class="card" data-reveal>
+              <div class="icon gradient-badge">🧰</div>
+              <h3>Modern Tooling</h3>
+              <p>Use Anchor, TypeScript, and strong SDKs to ship faster with familiar workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section features" id="features">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-reveal>Everything you need to build</h2>
+            <a class="link" href="#docs" data-reveal>Browse documentation →</a>
+          </div>
+          <div class="features-grid four">
+            <article class="card card-feature" data-reveal>
+              <h3>Anchor Framework</h3>
+              <p>Developer‑friendly framework for building Solana programs with Rust.</p>
+              <a href="#docs" class="link">Learn more</a>
+            </article>
+            <article class="card card-feature" data-reveal>
+              <h3>TypeScript SDKs</h3>
+              <p>Rich client libraries to integrate wallets, RPC, and on‑chain programs.</p>
+              <a href="#docs" class="link">Learn more</a>
+            </article>
+            <article class="card card-feature" data-reveal>
+              <h3>Wallet & RPC</h3>
+              <p>Plug into the ecosystem with popular wallets and reliable RPC providers.</p>
+              <a href="#docs" class="link">Learn more</a>
+            </article>
+            <article class="card card-feature" data-reveal>
+              <h3>Dev Community</h3>
+              <p>Join meetups, hackathons, and get feedback from experienced builders.</p>
+              <a href="#community" class="link">Join community</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section market" id="market">
+        <div class="container">
+          <div class="section-head">
+            <h2 data-reveal>Trading-style widgets</h2>
+            <p class="subhead" data-reveal>Watchlist, sparkline charts, and an order book preview for a pro feel.</p>
+          </div>
+          <div class="market-grid">
+            <article class="card watchlist" data-reveal>
+              <header class="card-head"><h3>Watchlist</h3></header>
+              <ul class="watchlist-list" id="watchlist">
+                <li><span class="pair">SOL/USDC</span><span class="price">$158.24</span><span class="change up">+1.2%</span></li>
+                <li><span class="pair">BTC/USDT</span><span class="price">$67,420</span><span class="change down">-0.5%</span></li>
+                <li><span class="pair">ETH/USDT</span><span class="price">$3,540</span><span class="change up">+0.4%</span></li>
+                <li><span class="pair">BONK/USDC</span><span class="price">$0.000019</span><span class="change up">+2.2%</span></li>
+              </ul>
+            </article>
+
+            <article class="card spark-card" data-reveal>
+              <header class="card-head"><h3>SOL mini chart</h3></header>
+              <svg class="sparkline" viewBox="0 0 200 60" preserveAspectRatio="none" data-symbol="SOL">
+                <path class="spark" d=""/>
+              </svg>
+            </article>
+
+            <article class="card spark-card" data-reveal>
+              <header class="card-head"><h3>BTC mini chart</h3></header>
+              <svg class="sparkline" viewBox="0 0 200 60" preserveAspectRatio="none" data-symbol="BTC">
+                <path class="spark" d=""/>
+              </svg>
+            </article>
+
+            <article class="card orderbook" data-reveal>
+              <header class="card-head"><h3>Order book (preview)</h3></header>
+              <div class="orderbook-grid">
+                <div class="side asks">
+                  <div class="row"><span class="price">158.90</span><span class="size">1.2</span></div>
+                  <div class="row"><span class="price">158.80</span><span class="size">0.9</span></div>
+                  <div class="row"><span class="price">158.75</span><span class="size">0.7</span></div>
+                  <div class="row"><span class="price">158.70</span><span class="size">1.5</span></div>
+                </div>
+                <div class="side bids">
+                  <div class="row"><span class="price">158.60</span><span class="size">2.0</span></div>
+                  <div class="row"><span class="price">158.55</span><span class="size">1.1</span></div>
+                  <div class="row"><span class="price">158.50</span><span class="size">0.8</span></div>
+                  <div class="row"><span class="price">158.45</span><span class="size">1.9</span></div>
+                </div>
+              </div>
+              <svg class="depth" viewBox="0 0 200 80" preserveAspectRatio="none" aria-label="Depth chart placeholder">
+                <defs>
+                  <linearGradient id="depthA" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#14f195" stop-opacity="0.6"/>
+                    <stop offset="1" stop-color="#14f195" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="depthB" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#9945ff" stop-opacity="0.6"/>
+                    <stop offset="1" stop-color="#9945ff" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,70 L60,40 L100,38 L140,34 L200,20 L200,80 L0,80 Z" fill="url(#depthA)"/>
+                <path d="M0,20 L60,30 L100,32 L140,36 L200,60 L200,80 L0,80 Z" fill="url(#depthB)"/>
+              </svg>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section community" id="community">
+        <div class="container community-inner">
+          <div class="community-copy">
+            <h2 data-reveal>Built with community</h2>
+            <p class="subhead" data-reveal>From first PR to production launch, you're not building alone.</p>
+            <ul class="checklist" data-reveal>
+              <li>Weekly office hours</li>
+              <li>Active Discord & forums</li>
+              <li>Starter templates & examples</li>
+            </ul>
+            <div class="cta-row" data-reveal>
+              <a class="btn btn-primary" href="#get-started">Join Discord</a>
+              <a class="btn btn-outline" href="#docs">View Tutorials</a>
+            </div>
+          </div>
+          <div class="community-media">
+            <div class="card media-card" data-reveal>
+              <img class="media-cover" src="assets/community-cover.svg" alt="Community showcase cover" width="560" height="320" loading="lazy" decoding="async" />
+              <div class="media-meta">
+                <span class="dot"></span>
+                <span>Community showcase</span>
+              </div>
+            </div>
+            <div class="card media-card small" data-reveal>
+              <img class="media-cover" src="assets/tutorial-cover.svg" alt="Latest tutorial cover" width="560" height="320" loading="lazy" decoding="async" />
+              <div class="media-meta">
+                <span class="dot"></span>
+                <span>Latest tutorial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner" id="get-started">
+        <div class="container cta-inner">
+          <h2 data-reveal>Ready to deploy?</h2>
+          <p data-reveal>Kickstart your next dApp with our templates and tooling.</p>
+          <a class="btn btn-primary btn-lg" href="#docs" data-reveal>Open the Docs</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="docs">
+      <div class="container footer-grid">
+        <div class="col">
+          <a class="brand brand-footer" href="#">
+            <img src="assets/logo.svg" alt="Logo" width="24" height="24" />
+            <span>Solana Devs</span>
+          </a>
+          <p class="muted">Open tools for high‑performance web3 apps.</p>
+          <div class="social">
+            <a href="#" aria-label="Twitter" class="social-ic" title="Twitter">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M22 5.8c-.7.3-1.4.5-2.1.6.8-.5 1.3-1.1 1.6-2-.7.4-1.5.8-2.3 1-1.4-1.5-3.9-1.2-5 0-1 1.1-1.3 2.6-.8 4.1-3.1-.2-5.9-1.7-7.8-4.2-1.3 2.3-.2 4.8 1.7 6--.6 0-1.2-.2-1.7-.5 0 2.1 1.5 3.9 3.5 4.3-.4.1-.9.1-1.3 0 .4 1.7 2 3 3.9 3-1.6 1.3-3.6 2-5.6 2h-.8c2 1.2 4.4 1.9 6.9 1.9 8.3 0 12.9-7 12.6-13.3.9-.6 1.5-1.3 2-2.1z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="GitHub" class="social-ic" title="GitHub">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 .5C5.7.5.7 5.6.7 12.1c0 5.1 3.2 9.4 7.6 10.9.6.1.8-.3.8-.6v-2.2c-3.1.7-3.8-1.4-3.8-1.4-.6-1.6-1.4-2-1.4-2-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.2 1.8 1.2 1 .1.7-.8 2.3-.8 1.3-.1 2.3-.6 2.8-1.3-2.5-.3-5.2-1.3-5.2-5.7 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.1-1.5 3.2-1.2 3.2-1.2.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.5-2.7 5.4-5.2 5.7.7.6 1.3 1.7 1.3 3.4v3.1c0 .3.2.7.8.6 4.4-1.5 7.6-5.8 7.6-10.9C23.3 5.6 18.3.5 12 .5z" fill="currentColor"/></svg>
+            </a>
+            <a href="#" aria-label="Discord" class="social-ic" title="Discord">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 4c-1.8-.8-3.7-1.2-5.6-1.3-.2.4-.4.9-.5 1.3-1.9-.3-3.9-.3-5.8 0-.2-.4-.4-.9-.5-1.3C5.7 2.8 3.8 3.2 2 4 0 7.3-.1 10.6.1 13.9c2.1 1.6 4.3 2.7 6.7 3.4.3-.4.6-.9.8-1.4-1.1-.4-2.1-1-3.1-1.8.4.3.9.5 1.4.8.4.2.8.5 1.2.6 2.1 1 4.4 1 6.5 0 .4-.2.8-.4 1.2-.6.5-.2 1-.5 1.4-.8-1 .8-2 1.4-3.1 1.8.2.5.5 1 .8 1.4 2.4-.7 4.6-1.8 6.7-3.4.3-3.3.2-6.6-1.8-9.9zM9.2 13.1c-.8 0-1.5-.7-1.5-1.5 0-.9.6-1.6 1.5-1.6.8 0 1.5.7 1.5 1.5 0 .9-.7 1.6-1.5 1.6zm5.6 0c-.8 0-1.5-.7-1.5-1.5 0-.9.6-1.6 1.5-1.6.8 0 1.5.7 1.5 1.5 0 .9-.6 1.6-1.5 1.6z" fill="currentColor"/></svg>
+            </a>
+          </div>
+        </div>
+        <nav class="col">
+          <h4>Docs</h4>
+          <ul>
+            <li><a href="#docs">Getting started</a></li>
+            <li><a href="#docs">CLI & SDK</a></li>
+            <li><a href="#docs">Templates</a></li>
+          </ul>
+        </nav>
+        <nav class="col">
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#community">Discord</a></li>
+            <li><a href="#community">Events</a></li>
+            <li><a href="#community">Showcase</a></li>
+          </ul>
+        </nav>
+        <div class="col right">
+          <p class="muted">© <span id="year"></span> Solana Devs. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/three@0.158.0/build/three.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
