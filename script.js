@@ -9,12 +9,14 @@ if (toggle && navList) {
   toggle.addEventListener('click', () => {
     const open = navList.classList.toggle('open');
     toggle.setAttribute('aria-expanded', String(open));
+    document.body.classList.toggle('no-scroll', open);
   });
   navList.addEventListener('click', (e) => {
     const a = e.target.closest('a');
     if (!a) return;
     navList.classList.remove('open');
     toggle.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('no-scroll');
   });
 }
 
@@ -103,12 +105,29 @@ if (toggle && navList) {
   onScroll();
 })();
 
-// ticker cloning for continuous scroll
+// Restore simpler marquee behavior: ticker duplication only, no scroll-sync on marquees
 (() => {
-  const track = document.getElementById('ticker-track');
-  if (!track) return;
-  const clone = track.cloneNode(true);
-  track.parentElement.appendChild(clone);
+  // Vertical autoscroll for watchlist only
+  const watch = document.querySelector('.watchlist-list');
+  if (watch) {
+    try {
+      watch.style.willChange = 'transform';
+      watch.innerHTML = watch.innerHTML + watch.innerHTML; // duplicate for loop
+      let oy = 0;
+      let contentH = watch.scrollHeight / 2;
+      function resizeWatch() { contentH = watch.scrollHeight / 2; }
+      window.addEventListener('resize', resizeWatch);
+      function rafWatch(ts) {
+        const speedY = 12; // constant speed
+        oy += speedY * Math.min(0.05, (performance.now() - (rafWatch._last || ts)) / 1000);
+        rafWatch._last = performance.now();
+        if (oy >= contentH) oy -= contentH;
+        watch.style.transform = `translateY(${-oy}px)`;
+        requestAnimationFrame(rafWatch);
+      }
+      requestAnimationFrame(rafWatch);
+    } catch {}
+  }
 })();
 
 // mini sparkline generator
