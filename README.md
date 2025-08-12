@@ -21,3 +21,14 @@ This project was created as a practice experiment using **Cursor AI** to explore
 - [Three.js](https://threejs.org/) – 3D rendering library
 
 ## 📂 Project Structure
+project-folder/
+│── index.html # Main HTML file
+│── style.css # Stylesheet
+│── script.js # Main JavaScript logic
+│── assets/ # Images, icons, etc.
+└── README.md # Project documentation
+
+## ⚡ Installation & Usage
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/usamafaheem-dev/Project-Through-Cursor-AI.git
